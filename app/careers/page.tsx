@@ -108,7 +108,7 @@ export default function Careers() {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-primary mb-4">Upload Your Resume</h2>
               <p className="text-xl text-gray-600">
-                Can't find a suitable position? Upload your resume and we'll contact you when relevant opportunities arise.
+                Can&apos;t find a suitable position? Upload your resume and we&apos;ll contact you when relevant opportunities arise.
               </p>
             </div>
             

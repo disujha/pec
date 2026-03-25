@@ -115,7 +115,7 @@ export default function WhyPEC() {
             Why <span className="text-pec-copper">PEC</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Compare PEC's technology-enabled execution approach against traditional EPC contractors 
+            Compare PEC&apos;s technology-enabled execution approach against traditional EPC contractors 
             to understand the competitive advantage we deliver.
           </p>
         </motion.div>

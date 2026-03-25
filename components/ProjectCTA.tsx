@@ -68,7 +68,7 @@ export default function ProjectCTA() {
             Ready to Execute Your <span className="text-pec-copper">Project?</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Let's discuss how PEC's technology-enabled EPC solutions can deliver predictable outcomes 
+            Let&apos;s discuss how PEC&apos;s technology-enabled EPC solutions can deliver predictable outcomes 
             for your complex oil, gas, and petrochemical projects.
           </p>
         </motion.div>
