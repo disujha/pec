@@ -4,6 +4,10 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-white py-20 lg:py-32">
         <div className="absolute inset-0 bg-black/20"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: 'url(/about-hero.png)' }}
+        ></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -148,7 +152,7 @@ export default function About() {
               Our experienced leadership team brings together decades of expertise in petrochemical engineering and construction.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-gray-50 p-6 rounded-xl text-center">
               <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -158,16 +162,6 @@ export default function About() {
               <h3 className="text-xl font-semibold text-primary mb-2">Biswajit Panja</h3>
               <p className="text-accent font-medium mb-2">Chief Executive Officer</p>
               <p className="text-gray-600 text-sm">20+ years in petrochemical industry, leading PEC&apos;s strategic vision and growth</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-xl text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Dr. Priya Sharma</h3>
-              <p className="text-accent font-medium mb-2">Chief Technology Officer</p>
-              <p className="text-gray-600 text-sm">PhD in Chemical Engineering, 25+ years in process design and optimization</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-xl text-center">
               <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -185,30 +179,10 @@ export default function About() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Suresh Reddy</h3>
-              <p className="text-accent font-medium mb-2">Head of Safety & HSE</p>
-              <p className="text-gray-600 text-sm">Certified HSE professional with 20+ years in industrial safety management</p>
+              <h3 className="text-xl font-semibold text-primary mb-2">Sunil Jha</h3>
+              <p className="text-accent font-medium mb-2">Chief Technology Officer</p>
+              <p className="text-gray-600 text-sm">Expert in chemical engineering and process optimization, driving technological innovation at PEC</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Meera Singh</h3>
-              <p className="text-accent font-medium mb-2">Head of Business Development</p>
-              <p className="text-gray-600 text-sm">MBA from IIM, 22+ years in business development and client relations</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-xl text-center">
-              <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">Vikram Joshi</h3>
-              <p className="text-accent font-medium mb-2">Head of Engineering</p>
-              <p className="text-gray-600 text-sm">M.Tech in Chemical Engineering, 26+ years in process and mechanical engineering</p>
-      </div>
           </div>
         </div>
       </section>

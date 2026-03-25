@@ -6,6 +6,10 @@ export default function Projects() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-white py-20 lg:py-32">
         <div className="absolute inset-0 bg-black/20"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: 'url(/projects-hero.png)' }}
+        ></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
