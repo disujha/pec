@@ -32,11 +32,10 @@ export default function Contact() {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-primary">Head Office</h3>
-                  <p className="text-gray-700">123 Petroleum Plaza, Mumbai, Maharashtra 400001, India</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-primary">Phone</h3>
-                  <p className="text-gray-700">022 6565 6222</p>
+                  <p className="text-gray-700">PEC Headquarters</p>
+                  <p className="text-gray-700">Petrochem Engineering Construction</p>
+                  <p className="text-gray-700">Barsundra, NH41 Highway</p>
+                  <p className="text-gray-700">Purba Medinipur, West Bengal 721654</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-primary">Email</h3>
