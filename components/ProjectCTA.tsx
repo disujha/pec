@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { MessageCircle, Upload, FileText, Phone, Mail, Send, CheckCircle2, ArrowRight } from 'lucide-react'
+import { MessageCircle, Upload, FileText, Phone, Mail, Send, CheckCircle2, ArrowRight, Zap, Edit } from 'lucide-react'
 
 export default function ProjectCTA() {
   const [formData, setFormData] = useState({
@@ -99,94 +99,93 @@ export default function ProjectCTA() {
           </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact options */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          {/* Left Card - Quick Contact */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+            <div className="bg-gradient-to-br from-pec-copper/10 to-pec-rust/10 backdrop-blur-md rounded-2xl p-8 border border-pec-copper/20 shadow-2xl h-full flex flex-col">
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 bg-pec-copper rounded-full flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Quick Contact</h3>
+                  <p className="text-pec-copper text-sm">24-hour response</p>
+                </div>
+              </div>
               
-              {/* Quick contact options */}
-              <div className="space-y-4 mb-8">
-                <a 
-                  href="tel:+919876543210"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10"
-                >
-                  <div className="w-12 h-12 bg-pec-copper rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
+              {/* Email Contact */}
+              <div className="flex-1">
+                <div className="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                      <Mail className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-white text-lg mb-1">Send Email</div>
+                      <div className="text-gray-300">info@pecengg.com</div>
+                      <div className="text-pec-copper text-sm mt-2">✓ Guaranteed response</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-white">Call Us</div>
-                    <div className="text-gray-300">+91 98765 43210</div>
-                  </div>
-                </a>
-
-                <a 
-                  href="https://wa.me/919876543210"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10"
-                >
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">WhatsApp</div>
-                    <span className="text-pec-navy">Chat with our team</span>
-                  </div>
-                </a>
-
-                <a 
-                  href="mailto:projects@pec.com"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10"
-                >
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">Email</div>
-                    <div className="text-gray-300">projects@pec.com</div>
-                  </div>
-                </a>
+                </div>
               </div>
 
-              {/* Document upload */}
-              <div className="border-t border-white/20 pt-6">
-                <h4 className="font-semibold text-white mb-4">Share Your Requirements</h4>
-                <div className="space-y-3">
-                  <button className="w-full flex items-center justify-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10 border-dashed">
+              {/* Quick Actions */}
+              <div className="mt-6 space-y-3">
+                <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-pec-copper" />
+                  Quick Actions
+                </h4>
+                <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-pec-copper/30 group">
+                  <div className="flex items-center gap-3">
                     <Upload className="w-5 h-5 text-pec-copper" />
                     <span className="text-white">Upload Tender Document</span>
-                  </button>
-                  <button className="w-full flex items-center justify-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors border border-white/10 border-dashed">
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-pec-copper transition-colors" />
+                </button>
+                <button className="w-full flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-pec-copper/30 group">
+                  <div className="flex items-center gap-3">
                     <FileText className="w-5 h-5 text-pec-copper" />
                     <span className="text-white">Share BOQ / Scope</span>
-                  </button>
-                </div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-pec-copper transition-colors" />
+                </button>
               </div>
             </div>
           </motion.div>
 
-          {/* Contact form */}
+          {/* Right Card - Project Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <div className="bg-white rounded-xl p-8">
+            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border border-gray-100 h-full flex flex-col">
               {!isSubmitted ? (
                 <>
-                  <h3 className="text-2xl font-bold text-pec-dark mb-6">Discuss Your Project</h3>
+                  {/* Form Header */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-pec-copper rounded-full flex items-center justify-center">
+                      <Edit className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-pec-dark">Project Details</h3>
+                      <p className="text-pec-copper text-sm">Get expert consultation</p>
+                    </div>
+                  </div>
                   
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="flex-1 space-y-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-pec-navy mb-1">
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
                           Name *
                         </label>
                         <input
@@ -195,11 +194,12 @@ export default function ProjectCTA() {
                           required
                           value={formData.name}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                          placeholder="Your full name"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-pec-navy mb-1">
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
                           Company
                         </label>
                         <input
@@ -207,14 +207,15 @@ export default function ProjectCTA() {
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                          placeholder="Company name"
                         />
                       </div>
                     </div>
-
-                    <div className="grid grid-cols-2 gap-4">
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-sm font-medium text-pec-navy mb-1">
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
                           Email *
                         </label>
                         <input
@@ -223,11 +224,12 @@ export default function ProjectCTA() {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                          placeholder="your.email@company.com"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-pec-navy mb-1">
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
                           Phone
                         </label>
                         <input
@@ -235,77 +237,81 @@ export default function ProjectCTA() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                          placeholder="+91 98765 43210"
                         />
                       </div>
                     </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Project Type *
-                      </label>
-                      <select
-                        name="projectType"
-                        required
-                        value={formData.projectType}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
-                      >
-                        <option value="">Select project type</option>
-                        {projectTypes.map(type => (
-                          <option key={type} value={type}>{type}</option>
-                        ))}
-                      </select>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div>
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
+                          Project Type *
+                        </label>
+                        <select
+                          name="projectType"
+                          required
+                          value={formData.projectType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select project type</option>
+                          {projectTypes.map(type => (
+                            <option key={type} value={type}>{type}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-pec-navy mb-2">
+                          Timeline
+                        </label>
+                        <select
+                          name="timeline"
+                          value={formData.timeline}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select timeline</option>
+                          {timelines.map(timeline => (
+                            <option key={timeline} value={timeline}>{timeline}</option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
-
+                    
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Expected Timeline *
-                      </label>
-                      <select
-                        name="timeline"
-                        required
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
-                      >
-                        <option value="">Select timeline</option>
-                        {timelines.map(timeline => (
-                          <option key={timeline} value={timeline}>{timeline}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Project Details
+                      <label className="block text-sm font-semibold text-pec-navy mb-2">
+                        Project Requirements *
                       </label>
                       <textarea
                         name="message"
+                        required
                         rows={4}
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Briefly describe your project requirements..."
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-pec-copper focus:border-transparent transition-all duration-300"
+                        placeholder="Describe your project requirements..."
                       />
                     </div>
-
+                    
                     <button
                       type="submit"
-                      className="w-full bg-pec-copper hover:bg-pec-rust text-white py-3 px-6 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
+                      className="w-full bg-gradient-to-r from-pec-copper to-pec-rust hover:from-pec-rust hover:to-pec-copper text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-pec-copper/25"
                     >
-                      <Send className="w-5 h-5" />
-                      Submit Project Request
+                      <span className="flex items-center justify-center gap-3">
+                        <Send className="w-5 h-5" />
+                        Send Project Inquiry
+                      </span>
                     </button>
                   </form>
-                </>
+                </> 
               ) : (
-                <div className="text-center py-12">
+                <div className="flex-1 flex flex-col items-center justify-center text-center py-12">
                   <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="w-10 h-10 text-green-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-pec-dark mb-4">
-                    Thank You for Your Interest!
+                    Thank You!
                   </h3>
                   <p className="text-gray-600 mb-6">
                     Our project team will review your requirements and contact you within 24 hours 
