@@ -16,7 +16,7 @@ export default function Careers() {
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
               Join our team of experts and contribute to shaping the future of the oil and gas industry.
             </p>
-            <a href="/contact" className="inline-block bg-accent text-primary px-8 py-4 rounded-lg font-semibold hover:bg-opacity-80 transition-colors">
+            <a href="/contact" className="inline-block bg-blue-100 text-blue-800 px-8 py-4 rounded-lg font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
               Apply Now
             </a>
           </div>
@@ -56,42 +56,42 @@ export default function Careers() {
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">Site Supervisor</h3>
                   <p className="text-sm text-gray-700">Experience: 3+ years | Location: Haldia</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">Safety Officer</h3>
                   <p className="text-sm text-gray-700">Experience: 2+ years | Location: Haldia</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">Site Incharge</h3>
                   <p className="text-sm text-gray-700">Experience: 5+ years | Location: Haldia</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">Senior Petroleum Engineer</h3>
                   <p className="text-sm text-gray-700">Experience: 5+ years | Location: Mumbai</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">Project Manager</h3>
                   <p className="text-sm text-gray-700">Experience: 7+ years | Location: Delhi</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
                 <div className="bg-secondary p-4 rounded-lg">
                   <h3 className="font-semibold text-primary">HSE Specialist</h3>
                   <p className="text-sm text-gray-700">Experience: 3+ years | Location: Chennai</p>
-                  <button className="mt-2 bg-accent text-primary px-4 py-2 rounded text-sm font-semibold hover:bg-opacity-80 transition-colors">
+                  <button className="mt-2 bg-blue-100 text-blue-800 px-4 py-2 rounded text-sm font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                     Apply Now
                   </button>
                 </div>
@@ -174,7 +174,7 @@ export default function Careers() {
                   </label>
                 </div>
 
-                <button type="submit" className="w-full bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:bg-opacity-80 transition-colors">
+                <button type="submit" className="w-full bg-blue-100 text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-blue-200 transition-colors border border-blue-200">
                   Submit Application
                 </button>
               </form>

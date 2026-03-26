@@ -64,7 +64,7 @@ export default function ExecutionSection() {
             <div className="w-12 h-0.5 bg-pec-copper"></div>
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            <span className="text-pec-copper">PEC-X</span> EXECUTION
+            <span className="text-pec-copper">epcX</span> EXECUTION
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light tracking-wide">
             Proprietary methodology combining <span className="text-pec-copper font-semibold">25+ years expertise</span> with 
