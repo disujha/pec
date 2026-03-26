@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "PEC - Petrochemical Engineering & Construction | Leading Global EPC Services",
-  description: "PEC is a leading petrochemical engineering and construction company with 25+ years of excellence. We deliver world-class EPC services, process engineering, and construction solutions to oil, gas, and petrochemical industries across 15+ countries.",
-  keywords: "petrochemical engineering, EPC services, oil gas construction, process engineering, offshore platforms, pipeline construction, refinery projects, petrochemical plants, safety engineering, environmental consulting",
+  title: "PEC - Petrochemical Engineering & Construction | EPC Services",
+  description: "PEC is a petrochemical engineering and construction company with 25+ years of excellence. We deliver EPC services, process engineering, and construction solutions to oil, gas, and petrochemical industries with proven expertise in Indian and GCC markets.",
+  keywords: "petrochemical engineering, EPC services, oil gas construction, process engineering, refinery projects, petrochemical plants, safety engineering, environmental consulting, Kuwait refinery, GCC projects",
   authors: [{ name: "PEC Petrochemical Engineering & Construction" }],
   icons: {
     icon: '/favicon.png',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "PEC - Petrochemical Engineering & Construction",
-    description: "Leading global provider of petrochemical engineering and construction services with 25+ years of excellence.",
+    description: "Established provider of petrochemical engineering and construction services with 25+ years of excellence.",
     type: "website",
     locale: "en_US",
     images: [

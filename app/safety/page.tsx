@@ -122,7 +122,7 @@ export default function Safety() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">Compliance Management</h3>
-                  <p className="text-gray-600">Strict adherence to local and international HSE regulations and standards.</p>
+                  <p className="text-gray-600">Strict adherence to local and industry HSE regulations and standards.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -181,7 +181,7 @@ export default function Safety() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Certifications & Standards</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We maintain the highest standards of certification and compliance with international HSE requirements.
+              We maintain the highest standards of certification and compliance with industry HSE requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,7 +237,7 @@ export default function Safety() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-primary mb-2">IADC</h3>
-              <p className="text-gray-600">International Association of Drilling Contractors</p>
+              <p className="text-gray-600">Association of Drilling Contractors</p>
             </div>
           </div>
         </div>

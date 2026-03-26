@@ -72,9 +72,9 @@ const Footer = () => {
               </div>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Leading provider of petrochemical engineering and construction services with 
-                25+ years of excellence in delivering world-class EPC solutions to the global 
-                energy sector.
+                Established provider of petrochemical engineering and construction services with 
+                25+ years of excellence in delivering EPC solutions to the 
+                Indian energy sector.
               </p>
 
               <div className="flex space-x-4">
@@ -167,8 +167,8 @@ const Footer = () => {
                 <div className="text-xs text-gray-600 uppercase tracking-wide">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary font-serif">15+</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Countries</div>
+                <div className="text-2xl font-bold text-primary font-serif">1+</div>
+                <div className="text-xs text-gray-600 uppercase tracking-wide">GCC Project</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary font-serif">500+</div>

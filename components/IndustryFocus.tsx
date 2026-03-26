@@ -143,7 +143,7 @@ export default function IndustryFocus() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Specialized expertise in oil, gas, and petrochemical infrastructure with proven 
-            execution capabilities across complex industrial environments.
+            execution capabilities in industrial environments.
           </p>
         </motion.div>
 

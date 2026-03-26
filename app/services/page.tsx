@@ -28,7 +28,7 @@ export default function Services() {
     {
       id: 3,
       title: "Quality Assurance",
-      description: "Rigorous quality control and assurance programs ensuring compliance with international standards.",
+      description: "Rigorous quality control and assurance programs ensuring compliance with industry standards.",
       features: ["Quality Management Systems", "Inspection & Testing", "Compliance Auditing", "Documentation Control"],
       icon: Shield,
       color: "from-purple-500 to-purple-600"
@@ -65,6 +65,7 @@ export default function Services() {
       title: "Offshore Engineering",
       description: "Specialized engineering solutions for offshore platforms, subsea systems, and marine structures.",
       icon: Zap,
+      color: "from-cyan-500 to-cyan-600",
       features: ["Platform Design", "Subsea Engineering", "Marine Structures", "Offshore Installation"]
     },
     {
@@ -72,6 +73,7 @@ export default function Services() {
       title: "Safety Engineering",
       description: "Comprehensive safety engineering services including HAZOP, SIL, and safety instrumented systems.",
       icon: Shield,
+      color: "from-red-500 to-red-600",
       features: ["HAZOP Studies", "SIL Assessment", "Safety Systems Design", "Risk Analysis"]
     },
     {
@@ -79,6 +81,7 @@ export default function Services() {
       title: "Digital Engineering",
       description: "Advanced digital solutions including 3D modeling, simulation, and digital twin technology.",
       icon: Cog,
+      color: "from-indigo-500 to-indigo-600",
       features: ["3D Modeling", "Process Simulation", "Digital Twin Technology", "Advanced Analytics"]
     },
     {
@@ -86,6 +89,7 @@ export default function Services() {
       title: "Process Optimization",
       description: "Advanced process optimization techniques to improve efficiency, reduce costs, and enhance performance.",
       icon: BarChart,
+      color: "from-green-500 to-green-600",
       features: ["Efficiency Analysis", "Cost Optimization", "Performance Enhancement", "Process Integration"]
     },
     {
@@ -93,6 +97,7 @@ export default function Services() {
       title: "Training & Development",
       description: "Specialized training programs for industry professionals and workforce development.",
       icon: Users,
+      color: "from-purple-500 to-purple-600",
       features: ["Technical Training", "Skill Development", "Certification Programs", "Knowledge Transfer"]
     },
     {
@@ -100,6 +105,7 @@ export default function Services() {
       title: "Performance Analytics",
       description: "Data-driven analytics and performance monitoring to optimize plant operations and efficiency.",
       icon: Award,
+      color: "from-yellow-500 to-yellow-600",
       features: ["Real-time Monitoring", "Performance Analytics", "Predictive Maintenance", "Operational Insights"]
     }
   ];
@@ -180,16 +186,8 @@ export default function Services() {
               Comprehensive Engineering Services
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-              From concept to completion, we deliver integrated solutions across the entire petrochemical value chain with world-class expertise and cutting-edge technology.
+              From concept to completion, we deliver integrated solutions across the entire petrochemical value chain with proven expertise and cutting-edge technology.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              {[/* Add your stats here */].map((stat, index) => (
-                <div key={index} className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <stat.icon className="w-4 h-4 mr-2" />
-                  <span>{stat.label}: <strong>{stat.number}</strong></span>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>

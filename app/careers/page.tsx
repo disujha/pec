@@ -45,7 +45,7 @@ export default function Careers() {
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Competitive compensation and benefits</li>
                 <li>Opportunities for professional growth</li>
-                <li>Work on cutting-edge projects globally</li>
+                <li>Work on cutting-edge projects in India and GCC</li>
                 <li>Commitment to work-life balance</li>
                 <li>Inclusive and diverse workplace</li>
               </ul>

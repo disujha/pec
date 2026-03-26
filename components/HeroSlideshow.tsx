@@ -34,7 +34,7 @@ export default function HeroSlideshow() {
             
             {/* Subtext */}
             <p className="text-sm lg:text-base text-white leading-relaxed text-center">
-              For over two decades, PEC has delivered world-class petrochemical engineering solutions across the globe, partnering with industry leaders who demand excellence. Ready to challenge us with your next complex project?
+              For over two decades, PEC has delivered proven petrochemical engineering solutions across India, partnering with industry leaders who demand excellence. Ready to challenge us with your next complex project?
             </p>
           </div>
         </div>

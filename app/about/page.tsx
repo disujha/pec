@@ -13,8 +13,8 @@ export default function About() {
       role: "Chief Executive Officer",
       image: "/panja.png",
       experience: "25+ years",
-      description: "Visionary leader with 25+ years of EPC project experience across the globe. Has successfully delivered complex petrochemical projects in Middle East, Africa, and Southeast Asia, establishing PEC as a trusted name in international engineering. Known for strategic planning, client relationship management, and excellence in large-scale project execution.",
-      expertise: ["Strategic Planning", "Business Development", "Global Operations", "EPC Project Execution", "International Markets"],
+      description: "Visionary leader with 25+ years of EPC project experience. Has successfully delivered complex petrochemical projects in India and GCC markets, establishing PEC as a trusted name in engineering. Known for strategic planning, client relationship management, and excellence in large-scale project execution.",
+      expertise: ["Strategic Planning", "Business Development", "Operations Management", "EPC Project Execution", "GCC Markets"],
       linkedin: "",
       email: "bpanja@pecengg.com"
     },
@@ -40,8 +40,8 @@ export default function About() {
     },
     {
       year: "2005",
-      title: "First International Project", 
-      description: "Expanded to Middle East market",
+      title: "Market Expansion", 
+      description: "Expanded operations to key industrial regions",
       icon: Target
     },
     {
@@ -52,8 +52,8 @@ export default function About() {
     },
     {
       year: "2015",
-      title: "Global Expansion",
-      description: "Opened offices in Africa & Southeast Asia",
+      title: "GCC Entry",
+      description: "Successfully entered GCC market with Kuwait project",
       icon: MapPin
     },
     {
@@ -67,12 +67,12 @@ export default function About() {
   const values = [
     {
       title: "Our Mission",
-      description: "To deliver world-class petrochemical engineering and construction services that drive efficiency, safety, and sustainability in the energy sector while creating value for our clients and stakeholders.",
+      description: "To deliver quality petrochemical engineering and construction services that drive efficiency, safety, and sustainability in the energy sector while creating value for our clients and stakeholders.",
       icon: Target
     },
     {
       title: "Our Vision", 
-      description: "To be the leading provider of integrated petrochemical engineering solutions globally, recognized for innovation, environmental responsibility, and exceptional project delivery.",
+      description: "To be a trusted provider of integrated petrochemical engineering solutions in India, recognized for innovation, environmental responsibility, and exceptional project delivery.",
       icon: Eye
     },
     {
@@ -83,9 +83,9 @@ export default function About() {
   ];
 
   const achievements = [
-    { number: "500+", label: "Projects Completed", sublabel: "Across 15+ Countries" },
+    { number: "500+", label: "Projects Completed", sublabel: "India & GCC" },
     { number: "25+", label: "Years Experience", sublabel: "Industry Leadership" },
-    { number: "1000+", label: "Expert Professionals", sublabel: "Global Team" },
+    { number: "1000+", label: "Expert Professionals", sublabel: "Dedicated Team" },
     { number: "$2B+", label: "Project Value", sublabel: "Cumulative" }
   ];
 
@@ -138,7 +138,7 @@ export default function About() {
               {[
                 { number: "500+", label: "Projects Completed", icon: Target },
                 { number: "25+", label: "Years Experience", icon: Calendar },
-                { number: "15+", label: "Countries Served", icon: MapPin },
+                { number: "1+", label: "GCC Projects", icon: MapPin },
                 { number: "1000+", label: "Expert Professionals", icon: Users }
               ].map((stat, index) => (
                 <div key={index} className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -163,7 +163,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">Our Story</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From a small consultancy to a global engineering powerhouse
+              From a small consultancy to a leading engineering powerhouse
             </p>
           </motion.div>
 
@@ -176,13 +176,13 @@ export default function About() {
             >
               <div className="space-y-6 text-gray-600">
                 <p className="text-lg">
-                  Founded in 1998, PEC Petrochemical Engineering & Construction has grown from a small engineering consultancy to a leading global provider of petrochemical engineering and construction services.
+                  Founded in 1998, PEC Petrochemical Engineering & Construction has grown from a small engineering consultancy to an established provider of petrochemical engineering and construction services in India.
                 </p>
                 <p className="text-lg">
                   Our journey began with a vision to revolutionize the petrochemical industry through innovative engineering solutions, uncompromising safety standards, and sustainable practices.
                 </p>
                 <p className="text-lg">
-                  Today, we serve major oil, gas, and petrochemical companies across four continents with headquarters in Mumbai, India.
+                  Today, we are a trusted partner to major oil, gas, and petrochemical companies across India, with headquarters in Mumbai and selective international project experience in the GCC region.
                 </p>
               </div>
             </motion.div>

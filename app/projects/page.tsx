@@ -184,7 +184,7 @@ export default function Projects() {
               Our Project Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8">
-              Showcasing our expertise through successful delivery of complex petrochemical projects across the globe.
+              Showcasing our expertise through successful delivery of complex petrochemical projects in India and the GCC region.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">

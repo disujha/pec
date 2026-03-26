@@ -96,18 +96,18 @@ export default function CaseStudies() {
     },
     {
       id: 6,
-      title: "BPCL Kochi Storage Terminal",
-      client: "Bharat Petroleum Corporation Limited",
-      category: "storage",
-      location: "Kochi, Kerala",
-      timeline: "15 months",
-      scope: "Strategic petroleum reserve - 500,000 KL",
-      challenge: "High water table and challenging soil conditions",
-      outcome: "Innovative foundation design reduced timeline by 3 months",
+      title: "Kuwait National Petroleum Company Refinery",
+      client: "KNPC - Kuwait National Petroleum Company",
+      category: "refinery",
+      location: "Al Ahmadi, Kuwait",
+      timeline: "32 months",
+      scope: "Refinery upgrade and clean fuel project - 615,000 BPD capacity",
+      challenge: "Harsh desert environment with extreme temperatures and stringent quality requirements",
+      outcome: "Successfully completed with zero safety incidents and full operational readiness",
       metrics: {
-        safety: "Zero incidents",
-        quality: "99.7% compliance",
-        efficiency: "20% faster execution"
+        safety: "Zero LTIs",
+        quality: "100% compliance",
+        efficiency: "On-time delivery"
       },
       image: "/api/placeholder/600/400"
     }
