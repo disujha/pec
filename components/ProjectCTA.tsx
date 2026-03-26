@@ -56,21 +56,47 @@ export default function ProjectCTA() {
       <div className="absolute inset-0 bg-blueprint bg-blueprint opacity-5" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
+        {/* Enhanced Section header with visual elements */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Execute Your <span className="text-pec-copper">Project?</span>
+          {/* Decorative elements */}
+          <div className="flex justify-center mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-0.5 bg-pec-copper"></div>
+              <div className="w-3 h-3 bg-pec-copper rounded-full animate-pulse"></div>
+              <div className="w-12 h-0.5 bg-pec-copper"></div>
+            </div>
+          </div>
+          
+          <h2 className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
+            Ready to Execute Your <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pec-copper to-pec-rust">Project?</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
             Let&apos;s discuss how PEC&apos;s technology-enabled EPC solutions can deliver predictable outcomes 
             for your complex oil, gas, and petrochemical projects.
           </p>
+          
+          {/* Subtle stats */}
+          <div className="flex justify-center gap-12 mt-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pec-copper mb-1">500+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pec-copper mb-1">25+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Years</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pec-copper mb-1">87%</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">On-Time</div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
