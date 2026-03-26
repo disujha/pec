@@ -37,10 +37,10 @@ const Footer = () => {
   ];
 
   const certifications = [
-    'ISO 9001:2015',
-    'ISO 14001:2015', 
-    'ISO 45001:2018',
-    'API Q1'
+    'ISO 9001:2015 (Proposed)',
+    'ISO 14001:2015 (Proposed)', 
+    'ISO 45001:2018 (Proposed)',
+    'API Q1 (Proposed)'
   ];
 
   const socialLinks = [
