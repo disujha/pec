@@ -156,7 +156,7 @@ export default function Hero() {
           {[
             { value: "25+", label: "YEARS", sublabel: "EXPERIENCE" },
             { value: "500+", label: "PROJECTS", sublabel: "DELIVERED" },
-            { value: "98%", label: "ON-TIME", sublabel: "DELIVERY" }
+            { value: "87%", label: "ON-TIME", sublabel: "DELIVERY" }
           ].map((stat, index) => (
             <div key={index} className="relative group">
               <div className="absolute inset-0 bg-pec-rust/10 transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>

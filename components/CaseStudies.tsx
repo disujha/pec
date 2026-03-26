@@ -6,6 +6,7 @@ import { Calendar, MapPin, Users, Award, TrendingUp, Clock, CheckCircle2, ArrowR
 
 export default function CaseStudies() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const [selectedStudy, setSelectedStudy] = useState<typeof caseStudies[0] | null>(null)
 
   const caseStudies = [
     {
@@ -247,7 +248,10 @@ export default function CaseStudies() {
                 </div>
 
                 {/* CTA */}
-                <button className="w-full bg-pec-copper hover:bg-pec-rust text-white py-3 px-4 rounded-lg font-medium inline-flex items-center justify-center gap-2 transition-colors">
+                <button 
+                  onClick={() => setSelectedStudy(study)}
+                  className="w-full bg-pec-copper hover:bg-pec-rust text-white py-3 px-4 rounded-lg font-medium inline-flex items-center justify-center gap-2 transition-colors"
+                >
                   View Detailed Case Study
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -271,13 +275,179 @@ export default function CaseStudies() {
             <p className="text-gray-300 mb-6">
               Let us demonstrate how our execution intelligence can deliver predictable outcomes for your complex EPC requirements.
             </p>
-            <button className="bg-pec-copper hover:bg-pec-rust text-white px-8 py-4 text-lg font-semibold rounded-md inline-flex items-center gap-2 group transition-colors">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('project-discussion');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-pec-copper hover:bg-pec-rust text-white px-8 py-4 text-lg font-semibold rounded-md inline-flex items-center gap-2 group transition-colors"
+            >
               Discuss Your Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </motion.div>
       </div>
+
+      {/* Side Sheet Overlay */}
+      {selectedStudy && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setSelectedStudy(null)}
+          />
+          
+          {/* Side Sheet */}
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+            className="absolute right-0 top-0 h-full w-full max-w-2xl bg-white shadow-2xl overflow-y-auto"
+          >
+            {/* Header */}
+            <div className="sticky top-0 bg-pec-dark text-white p-6 border-b border-gray-700">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">{selectedStudy.title}</h3>
+                  <p className="text-pec-copper font-medium">{selectedStudy.client}</p>
+                </div>
+                <button
+                  onClick={() => setSelectedStudy(null)}
+                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              <div className="flex items-center gap-6 mt-4 text-sm text-gray-300">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  {selectedStudy.location}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  {selectedStudy.timeline}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  Completed 2024
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 space-y-8">
+              {/* Project Overview */}
+              <div>
+                <h4 className="text-xl font-bold text-pec-dark mb-4">Project Overview</h4>
+                <div className="bg-pec-copper/10 p-4 rounded-lg mb-4">
+                  <p className="text-pec-dark font-medium">{selectedStudy.scope}</p>
+                </div>
+              </div>
+
+              {/* Key Challenge */}
+              <div>
+                <h4 className="text-xl font-bold text-pec-dark mb-4">Key Challenge</h4>
+                <div className="bg-red-50 border-l-4 border-red-500 p-4">
+                  <p className="text-gray-700">{selectedStudy.challenge}</p>
+                </div>
+              </div>
+
+              {/* Solution & Outcome */}
+              <div>
+                <h4 className="text-xl font-bold text-pec-dark mb-4">Solution & Outcome</h4>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4">
+                  <p className="text-green-800 font-medium">{selectedStudy.outcome}</p>
+                </div>
+              </div>
+
+              {/* Detailed Metrics */}
+              <div>
+                <h4 className="text-xl font-bold text-pec-dark mb-4">Performance Metrics</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-gray-50 p-4 rounded-lg text-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <CheckCircle2 className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="text-sm text-gray-600 mb-1">Safety Record</div>
+                    <div className="text-lg font-bold text-pec-dark">{selectedStudy.metrics.safety}</div>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-lg text-center">
+                    <div className="w-12 h-12 bg-pec-copper/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Award className="w-6 h-6 text-pec-copper" />
+                    </div>
+                    <div className="text-sm text-gray-600 mb-1">Quality Compliance</div>
+                    <div className="text-lg font-bold text-pec-dark">{selectedStudy.metrics.quality}</div>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-lg text-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <TrendingUp className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div className="text-sm text-gray-600 mb-1">Efficiency</div>
+                    <div className="text-lg font-bold text-pec-dark">{selectedStudy.metrics.efficiency}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project Highlights */}
+              <div>
+                <h4 className="text-xl font-bold text-pec-dark mb-4">Project Highlights</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-pec-copper rounded-full mt-2"></div>
+                    <p className="text-gray-700">Strategic planning and execution excellence</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-pec-copper rounded-full mt-2"></div>
+                    <p className="text-gray-700">Advanced technology integration and digital solutions</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-pec-copper rounded-full mt-2"></div>
+                    <p className="text-gray-700">Exceptional safety and environmental performance</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-pec-copper rounded-full mt-2"></div>
+                    <p className="text-gray-700">On-time delivery within budget constraints</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="bg-pec-dark rounded-xl p-6">
+                <h4 className="text-xl font-bold text-white mb-3">Interested in Similar Projects?</h4>
+                <p className="text-gray-300 mb-6">
+                  Let's discuss how we can deliver similar results for your organization.
+                </p>
+                <div className="flex gap-4">
+                  <button 
+                    onClick={() => {
+                      setSelectedStudy(null);
+                      setTimeout(() => {
+                        const element = document.getElementById('project-discussion');
+                        element?.scrollIntoView({ behavior: 'smooth' });
+                      }, 300);
+                    }}
+                    className="bg-pec-copper hover:bg-pec-rust text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+                  >
+                    Discuss Your Project
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => setSelectedStudy(null)}
+                    className="border border-white text-white hover:bg-white hover:text-pec-dark px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   )
 }

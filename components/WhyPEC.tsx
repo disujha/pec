@@ -231,7 +231,13 @@ export default function WhyPEC() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-pec-copper hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-md inline-flex items-center gap-2 group transition-colors">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('project-discussion');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="bg-white text-pec-copper hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-md inline-flex items-center gap-2 group transition-colors"
+            >
               Schedule a Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>

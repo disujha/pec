@@ -267,10 +267,10 @@ export default function IndustryFocus() {
                 <div>
                   <div className="flex justify-between text-sm mb-1">
                     <span>On-Time Delivery</span>
-                    <span className="text-pec-copper">96%</span>
+                    <span className="text-pec-copper">87%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div className="bg-pec-copper h-2 rounded-full" style={{ width: '96%' }} />
+                    <div className="bg-pec-copper h-2 rounded-full" style={{ width: '87%' }} />
                   </div>
                 </div>
               </div>

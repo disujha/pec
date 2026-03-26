@@ -50,7 +50,7 @@ export default function ProjectCTA() {
   }
 
   return (
-    <section className="py-20 bg-pec-dark relative overflow-hidden">
+    <section id="project-discussion" className="py-20 bg-pec-dark relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-10" />
       <div className="absolute inset-0 bg-blueprint bg-blueprint opacity-5" />
