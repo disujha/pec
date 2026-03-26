@@ -304,7 +304,7 @@ export default function CaseStudies() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="absolute right-0 top-0 h-full w-full max-w-2xl bg-white shadow-2xl overflow-y-auto"
+            className="absolute right-0 top-0 h-full w-full max-w-full sm:max-w-2xl bg-white shadow-2xl overflow-y-auto"
           >
             {/* Header */}
             <div className="sticky top-0 bg-pec-dark text-white p-6 border-b border-gray-700">
