@@ -4,6 +4,19 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Play, BarChart3, Cpu, Zap } from 'lucide-react'
 
 export default function Hero() {
+  const scrollToProjectDiscussion = () => {
+    const element = document.getElementById('project-discussion')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const scrollToExecution = () => {
+    const element = document.getElementById('execution-section')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-pec-dark pt-24 pb-16">
       {/* Background with industrial overlay */}
@@ -127,7 +140,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
         >
-          <button className="group relative overflow-hidden bg-pec-rust text-white px-10 py-4 font-bold text-lg transition-all duration-300 hover:bg-pec-copper transform hover:scale-105 shadow-2xl hover:shadow-pec-rust/25">
+          <button 
+            onClick={scrollToProjectDiscussion}
+            className="group relative overflow-hidden bg-pec-rust text-white px-10 py-4 font-bold text-lg transition-all duration-300 hover:bg-pec-copper transform hover:scale-105 shadow-2xl hover:shadow-pec-rust/25 cursor-pointer"
+          >
             <span className="relative z-10 flex items-center gap-3">
               <span>START PROJECT</span>
               <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
@@ -137,7 +153,10 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-pec-copper to-pec-rust transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </button>
           
-          <button className="group relative overflow-hidden border-2 border-pec-copper text-pec-copper px-10 py-4 font-bold text-lg transition-all duration-300 hover:bg-pec-copper hover:text-white transform hover:scale-105">
+          <button 
+            onClick={scrollToExecution}
+            className="group relative overflow-hidden border-2 border-pec-copper text-pec-copper px-10 py-4 font-bold text-lg transition-all duration-300 hover:bg-pec-copper hover:text-white transform hover:scale-105 cursor-pointer"
+          >
             <span className="relative z-10 flex items-center gap-3">
               <Play className="w-5 h-5" />
               <span>VIEW EXECUTION</span>

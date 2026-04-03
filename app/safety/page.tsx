@@ -191,7 +191,7 @@ export default function Safety() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">ISO 45001:2018</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">ISO 45001:2018 (Proposed)</h3>
               <p className="text-gray-600">Occupational Health and Safety Management Systems</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-xl text-center">
@@ -200,7 +200,7 @@ export default function Safety() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">ISO 14001:2015</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">ISO 14001:2015 (Proposed)</h3>
               <p className="text-gray-600">Environmental Management Systems</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-xl text-center">
@@ -209,7 +209,7 @@ export default function Safety() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2">API Q1</h3>
+              <h3 className="text-xl font-semibold text-primary mb-2">API Q1 (Proposed)</h3>
               <p className="text-gray-600">Quality Management System for Petroleum Industry</p>
             </div>
             <div className="bg-gray-50 p-8 rounded-xl text-center">

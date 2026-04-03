@@ -47,7 +47,7 @@ export default function About() {
     {
       year: "2010",
       title: "ISO Certification",
-      description: "Achieved ISO 9001:2008 certification",
+      description: "Working towards ISO 9001:2008 certification",
       icon: Award
     },
     {
@@ -91,22 +91,22 @@ export default function About() {
 
   const certifications = [
     {
-      title: "ISO 9001:2015",
+      title: "ISO 9001:2015 (Proposed)",
       description: "Quality Management System",
       icon: Award
     },
     {
-      title: "ISO 14001:2015", 
+      title: "ISO 14001:2015 (Proposed)", 
       description: "Environmental Management",
       icon: Eye
     },
     {
-      title: "ISO 45001:2018",
+      title: "ISO 45001:2018 (Proposed)",
       description: "Occupational Health & Safety",
       icon: Users
     },
     {
-      title: "API Q1",
+      title: "API Q1 (Proposed)",
       description: "Petroleum Industry Quality",
       icon: Target
     }

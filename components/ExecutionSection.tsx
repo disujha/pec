@@ -41,7 +41,7 @@ export default function ExecutionSection() {
   ]
 
   return (
-    <section className="py-24 bg-pec-dark relative overflow-hidden">
+    <section id="execution-section" className="py-24 bg-pec-dark relative overflow-hidden">
       {/* Industrial Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-grid-pattern animate-grid-move"></div>
