@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width="240" height="100">
-  <rect width="240" height="100" rx="10" fill="#ffffff"/>
-  <rect x="14" y="18" width="52" height="64" rx="8" fill="#0F3D75"/>
-  <path d="M26 32h9v14h10V32h9v36h-9V54H35v14h-9V32z" fill="#ffffff"/>
-  <text x="80" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="30" fill="#0F3D75" letter-spacing="1.5">HPL</text>
-  <text x="80" y="72" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="11" fill="#4B5563" letter-spacing="0.4">HALDIA PETROCHEMICALS</text>
-</svg>
