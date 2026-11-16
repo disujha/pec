@@ -29,6 +29,7 @@ const Footer = () => {
       title: 'Resources',
       links: [
         { href: '/projects', label: 'Projects' },
+        { href: '/credentials', label: 'Credentials' },
         { href: '/clients', label: 'Clients' },
         { href: '/safety', label: 'Safety & HSE' },
         { href: '/contact', label: 'Contact' }
