@@ -34,20 +34,70 @@ function decodeFirestoreValue(val: any): any {
   return null;
 }
 
-async function fetchFirestoreCollection(name: string): Promise<any[]> {
-  const res = await fetch(`${FIRESTORE_BASE}/${name}?pageSize=300`, {
+async function runFirestoreQuery(
+  collectionId: string,
+  filters: Array<{ field: string; value: boolean }> = []
+): Promise<any[]> {
+  const structuredQuery: any = {
+    from: [{ collectionId }],
+    limit: 500,
+  };
+
+  if (filters.length === 1) {
+    structuredQuery.where = {
+      fieldFilter: {
+        field: { fieldPath: filters[0].field },
+        op: 'EQUAL',
+        value: { booleanValue: filters[0].value },
+      },
+    };
+  } else if (filters.length > 1) {
+    structuredQuery.where = {
+      compositeFilter: {
+        op: 'AND',
+        filters: filters.map((f) => ({
+          fieldFilter: {
+            field: { fieldPath: f.field },
+            op: 'EQUAL',
+            value: { booleanValue: f.value },
+          },
+        })),
+      },
+    };
+  }
+
+  const res = await fetch(`${FIRESTORE_BASE}:runQuery`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ structuredQuery }),
     cache: 'no-store',
   });
   if (!res.ok) return [];
-  const json = await res.json();
-  return (json.documents || []).map((doc: any) => {
-    const id = String(doc.name || '').split('/').pop() || '';
-    const out: Record<string, any> = { id };
-    for (const [k, v] of Object.entries(doc.fields || {})) {
-      out[k] = decodeFirestoreValue(v);
-    }
-    return out;
+  const rows = await res.json();
+  return (Array.isArray(rows) ? rows : [])
+    .filter((r: any) => r.document)
+    .map((r: any) => {
+      const doc = r.document;
+      const id = String(doc.name || '').split('/').pop() || '';
+      const out: Record<string, any> = { id };
+      for (const [k, v] of Object.entries(doc.fields || {})) {
+        out[k] = decodeFirestoreValue(v);
+      }
+      return out;
+    });
+}
+
+async function fetchGlobalSettings(): Promise<any> {
+  const res = await fetch(`${FIRESTORE_BASE}/credentialsSettings/global`, {
+    cache: 'no-store',
   });
+  if (!res.ok) return {};
+  const doc = await res.json();
+  const out: Record<string, any> = {};
+  for (const [k, v] of Object.entries(doc.fields || {})) {
+    out[k] = decodeFirestoreValue(v);
+  }
+  return out;
 }
 
 async function fetchFromFirestoreRest() {
@@ -58,19 +108,21 @@ async function fetchFromFirestoreRest() {
     rawProjects,
     rawWorkOrders,
     rawCerts,
-    rawSettings,
+    globalSetting,
   ] = await Promise.all([
-    fetchFirestoreCollection('clientCompanies'),
-    fetchFirestoreCollection('projectLocations'),
-    fetchFirestoreCollection('workCategories'),
-    fetchFirestoreCollection('projects'),
-    fetchFirestoreCollection('workOrders'),
-    fetchFirestoreCollection('completionCertificates'),
-    fetchFirestoreCollection('credentialsSettings'),
+    runFirestoreQuery('clientCompanies', [
+      { field: 'isActive', value: true },
+      { field: 'isPublic', value: true },
+    ]),
+    runFirestoreQuery('projectLocations', [{ field: 'isActive', value: true }]),
+    runFirestoreQuery('workCategories', [{ field: 'isActive', value: true }]),
+    runFirestoreQuery('projects', [{ field: 'isPublished', value: true }]),
+    runFirestoreQuery('workOrders', [{ field: 'isPublished', value: true }]),
+    runFirestoreQuery('completionCertificates', [
+      { field: 'isPublished', value: true },
+    ]),
+    fetchGlobalSettings(),
   ]);
-
-  const globalSetting =
-    rawSettings.find((s) => s.id === 'global') || ({} as any);
   const showOverallValue = globalSetting.showOverallValue !== false;
   const introText =
     globalSetting.introText ||
