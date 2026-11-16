@@ -17,6 +17,7 @@ import {
   Search,
   X,
 } from 'lucide-react';
+import { PdfCanvasViewer } from './PdfCanvasViewer';
 
 interface PublicCompany {
   id: string;
@@ -1015,14 +1016,8 @@ export function CredentialsPortfolio() {
               </div>
             </div>
 
-            <div className="flex-1 bg-gray-100">
-              <iframe
-                src={`${pdfModal.pdfUrl}#toolbar=${
-                  pdfModal.allowDownload ? '1' : '0'
-                }`}
-                title={pdfModal.title}
-                className="w-full h-full border-0"
-              />
+            <div className="flex-1 overflow-hidden">
+              <PdfCanvasViewer pdfUrl={pdfModal.pdfUrl} />
             </div>
           </div>
         </div>
