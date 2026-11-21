@@ -447,7 +447,7 @@ export function CredentialsPortfolio() {
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-xl font-bold text-pec-navy">
-                    Client Portfolio
+                    Some Client Portfolios
                   </h2>
                   <p className="text-xs sm:text-sm text-gray-500">
                     Click any client logo to view its project locations, scope,
