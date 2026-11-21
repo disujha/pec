@@ -174,7 +174,7 @@ export default function Hero() {
         >
           {[
             { value: "25+", label: "YEARS", sublabel: "EXPERIENCE" },
-            { value: "500+", label: "PROJECTS", sublabel: "DELIVERED" },
+            { value: "200+", label: "PROJECTS", sublabel: "DELIVERED" },
             { value: "87%", label: "ON-TIME", sublabel: "DELIVERY" }
           ].map((stat, index) => (
             <div key={index} className="relative group">

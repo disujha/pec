@@ -271,7 +271,7 @@ export default function UnderConstruction() {
           >
             {[
               { value: '25+', label: 'YEARS', sublabel: 'ENGINEERING EXPERIENCE' },
-              { value: '500+', label: 'PROJECTS', sublabel: 'DELIVERED SAFELY' },
+              { value: '200+', label: 'PROJECTS', sublabel: 'DELIVERED SAFELY' },
               { value: 'EPC', label: 'INDIA & GCC', sublabel: 'OIL, GAS & PETROCHEMICAL' },
             ].map((stat, idx) => (
               <div
