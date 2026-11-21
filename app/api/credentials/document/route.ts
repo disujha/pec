@@ -26,8 +26,15 @@ export async function GET(request: NextRequest) {
 
     const upstream = await fetch(
       `${ADMIN_API_BASE}/api/credentials/document?${qs.toString()}`,
-      { cache: 'no-store' }
+      { cache: 'no-store', redirect: 'manual' }
     );
+
+    if (upstream.status >= 300 && upstream.status < 400) {
+      const location = upstream.headers.get('location');
+      if (location) {
+        return NextResponse.redirect(location, 302);
+      }
+    }
 
     if (!upstream.ok) {
       return NextResponse.json(

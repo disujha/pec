@@ -11,6 +11,7 @@ export const UNDER_CONSTRUCTION_MODE = true;
  * (e.g. app store compliance pages).
  */
 export const UNDER_CONSTRUCTION_EXEMPT_PATHS = [
+  '/credentials',
   '/privacy',
   '/terms',
   '/delete-account',
